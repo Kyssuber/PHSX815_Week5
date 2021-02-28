@@ -79,7 +79,8 @@ if __name__ == "__main__":
             Npass = 0
             LLR = 0
             for v in lineVals:
-                Npass += float(v);
+                # += adds a number to the variable, changing the variable in the process. x=2 --> x += 5 --> x=7
+                Npass += float(v)
                 # adding LLR for this toss
                 if float(v) >= 1:
                     LLR += math.log( p1/p0 )

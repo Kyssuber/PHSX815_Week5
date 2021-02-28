@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 
+import math
 import numpy as np
 
 #################
@@ -25,7 +26,8 @@ class Random:
 
     # function returns a random 64 bit integer
     def int64(self):
-        self.m_u = np.uint64(self.m_u * 2862933555777941757) + np.uint64(7046029254386353087)
+        with np.errstate(over='ignore'):
+            self.m_u = np.uint64(self.m_u * 2862933555777941757) + np.uint64(7046029254386353087)
         self.m_v ^= self.m_v >> np.uint64(17)
         self.m_v ^= self.m_v << np.uint64(31)
         self.m_v ^= self.m_v >> np.uint64(8)
