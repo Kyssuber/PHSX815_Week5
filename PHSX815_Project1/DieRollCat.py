@@ -104,7 +104,7 @@ if __name__ == "__main__":
     else:
         for e in range(0,Nexp):
             for t in range(0,Nroll):
-                print(random.cate(prob_list), end=' ')
+                print(random.cate(prob_list)+ ' ')
             print(" ")
    
 
