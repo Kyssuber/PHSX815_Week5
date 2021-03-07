@@ -36,7 +36,7 @@ def TrapRule():
         area_sum += area
         plt.fill(xs,ys,'b',edgecolor='b',alpha=0.2)
     
-    print('total area:',area_sum)
+    print('Trapezoid Total Area:',area_sum)
         
     plt.title('Trapezoid Rule, N = {}'.format(N),fontsize=16)
     plt.xlabel(r'$x$',fontsize=16)
@@ -95,4 +95,4 @@ if __name__ == "__main__":
     GausQuadErr(func,a,b)
     print('Gaus err:',GausQuadErr(func,a,b))
     TrapRule()
-
+    
