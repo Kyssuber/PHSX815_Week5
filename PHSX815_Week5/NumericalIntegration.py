@@ -37,6 +37,13 @@ def TrapRule():
         plt.fill(xs,ys,'b',edgecolor='b',alpha=0.2)
     
     print('Trapezoid Total Area:',area_sum)
+    
+    b_comp = (b/2) - np.sin(8*b)/16
+    a_comp = (a/2) - np.sin(8*a)/16
+    accept = b_comp - a_comp
+    print('Trapezoid Err:',np.abs(accept - area_sum))
+    print('Analytical Solution:',accept)
+    
         
     plt.title('Trapezoid Rule, N = {}'.format(N),fontsize=16)
     plt.xlabel(r'$x$',fontsize=16)
@@ -95,4 +102,6 @@ if __name__ == "__main__":
     GausQuadErr(func,a,b)
     print('Gaus err:',GausQuadErr(func,a,b))
     TrapRule()
+    
+   
     
